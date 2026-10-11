@@ -12,7 +12,9 @@ node_modules
 dist
 dist-ssr
 *.local
-data/
+# Root-only: unanchored `data/` also matched src/data/ and left the site's
+# source data modules untracked, breaking the Cloudflare build.
+/data/
 
 # Editor directories and files
 .vscode/*
