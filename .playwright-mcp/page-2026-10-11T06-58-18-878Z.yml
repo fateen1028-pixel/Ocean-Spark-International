@@ -1,0 +1,474 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "Ocean Spark International Charcoal & Trade" [ref=e6] [cursor=pointer]:
+        - /url: "#top"
+        - generic [ref=e7]:
+          - generic [ref=e8]: Ocean Spark International
+          - generic [ref=e9]: Charcoal & Trade
+      - navigation "Primary" [ref=e10]:
+        - list [ref=e11]:
+          - listitem [ref=e12]:
+            - link "Home" [ref=e13] [cursor=pointer]:
+              - /url: "#top"
+          - listitem [ref=e14]:
+            - link "About Us" [ref=e15] [cursor=pointer]:
+              - /url: "#about"
+          - listitem [ref=e16]:
+            - link "Products" [ref=e17] [cursor=pointer]:
+              - /url: "#products"
+          - listitem [ref=e18]:
+            - link "Quality & Sourcing" [ref=e19] [cursor=pointer]:
+              - /url: "#quality"
+          - listitem [ref=e20]:
+            - link "Global Trade" [ref=e21] [cursor=pointer]:
+              - /url: "#trade"
+          - listitem [ref=e22]:
+            - link "Contact" [ref=e23] [cursor=pointer]:
+              - /url: "#contact"
+      - link "Request a Quote" [ref=e25] [cursor=pointer]:
+        - /url: "#quote"
+  - main [ref=e28]:
+    - generic [ref=e31]:
+      - paragraph [ref=e32]: Coconut Shell Charcoal · Import & Export
+      - heading [level=1] [ref=e33]:
+        - text: Premium Coconut Shell Charcoal for
+        - emphasis [ref=e34]: Global Markets.
+      - paragraph [ref=e35]: Connecting businesses with dependable coconut shell charcoal supply through professional sourcing, responsive service, and international trade.
+      - generic [ref=e36]:
+        - link "Request a Quote" [ref=e37] [cursor=pointer]:
+          - /url: "#quote"
+        - link "Explore Our Products" [ref=e40] [cursor=pointer]:
+          - /url: "#products"
+      - paragraph [ref=e41]:
+        - generic [ref=e42]: Wholesale & Bulk
+        - generic [ref=e43]: Importer · Distributor · Industrial
+      - paragraph [ref=e44]: Lump · Briquette · Industrial Grade
+    - region "Business focus areas" [ref=e49]:
+      - list [ref=e52]:
+        - listitem [ref=e53]:
+          - paragraph [ref=e56]: Coconut Shell Charcoal
+          - paragraph [ref=e57]: Shell-origin charcoal supplied in the forms your application requires.
+        - listitem [ref=e58]:
+          - paragraph [ref=e69]: Bulk Supply Inquiries
+          - paragraph [ref=e70]: Structured quotations for wholesale, distributor and industrial volumes.
+        - listitem [ref=e71]:
+          - paragraph [ref=e76]: International Trade
+          - paragraph [ref=e77]: Inquiry, documentation and shipping coordination across time zones.
+        - listitem [ref=e78]:
+          - paragraph [ref=e84]: B2B Partnerships
+          - paragraph [ref=e85]: Built for importers, wholesalers and long-term commercial relationships.
+    - generic [ref=e87]:
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - paragraph [ref=e90]: About Us
+          - heading "Built Around Reliable Trade." [level=2] [ref=e91]
+          - paragraph [ref=e92]: Ocean Spark International is a sourcing and trading business focused on coconut shell charcoal. We connect buyers who need dependable supply with product that is described accurately before any commitment is made.
+        - generic [ref=e93]:
+          - paragraph [ref=e94]: International commodity trade runs on information. A buyer in one market and a supplier in another rarely share the same assumptions about grade, packaging, paperwork or timing. Most of the friction in this trade is not the product — it is the ambiguity around it.
+          - paragraph [ref=e95]: "That is the part of the business we work on: stating what the product is, stating what has been checked, and saying plainly when something is still being confirmed. We are looking for commercial relationships that survive more than one shipment."
+        - list [ref=e96]:
+          - listitem [ref=e97]:
+            - generic [ref=e100]: Sourcing is matched to the specification a buyer actually needs, not to whatever is easiest to ship.
+          - listitem [ref=e101]:
+            - generic [ref=e104]: Product information is shared in writing before commercial terms are agreed.
+          - listitem [ref=e105]:
+            - generic [ref=e108]: We work toward repeat business, which means clear communication matters more than a fast answer.
+          - listitem [ref=e109]:
+            - generic [ref=e112]: Bulk orders are handled as coordinated movements of goods, paperwork and timelines.
+      - generic [ref=e113]:
+        - figure [ref=e114]:
+          - img "Stacks of filled woven sacks arranged in a warehouse, ready for bulk loading" [ref=e115]
+        - paragraph [ref=e116]: Bulk quantities are configured against your packaging and loading requirements.
+    - generic [ref=e118]:
+      - generic [ref=e120]:
+        - paragraph [ref=e121]: Products
+        - heading "Coconut Shell Charcoal, In The Form You Need." [level=2] [ref=e122]
+        - paragraph [ref=e123]: Three supply lines across lump, formed and industrial grades. Specifications and packaging are confirmed against the grade being quoted — tell us which line you need and we will send the relevant specification sheet.
+      - generic [ref=e124]:
+        - article [ref=e126]:
+          - generic [ref=e127]:
+            - img "Pile of black coconut shell charcoal lumps with brown, cracked surfaces, photographed from above" [ref=e128]
+            - generic [ref=e129]: Core Product
+          - generic [ref=e130]:
+            - generic [ref=e131]:
+              - heading "Coconut Shell Charcoal" [level=3] [ref=e132]
+              - paragraph [ref=e133]: Raw shell charcoal in lump form, supplied as the base material for grilling, BBQ and industrial fuel applications.
+              - list "Typical applications" [ref=e134]:
+                - listitem [ref=e135]: BBQ & grilling
+                - listitem [ref=e136]: Restaurant supply
+                - listitem [ref=e137]: Industrial fuel
+            - generic [ref=e138]:
+              - generic [ref=e139]:
+                - heading "Specification" [level=4] [ref=e140]
+                - paragraph [ref=e141]: Moisture, ash, fixed carbon and volatile matter are confirmed per grade and issued with the quotation rather than published as a general range.
+              - link "Request Specifications" [ref=e143] [cursor=pointer]:
+                - /url: "#quote"
+        - article [ref=e147]:
+          - generic [ref=e148]:
+            - img "Close-up of formed coconut shell charcoal briquettes glowing, with ash forming on the surface" [ref=e149]
+            - generic [ref=e150]: Formed Product
+          - generic [ref=e151]:
+            - generic [ref=e152]:
+              - heading "Coconut Shell Charcoal Briquettes" [level=3] [ref=e153]
+              - paragraph [ref=e154]: Shaped charcoal briquettes for buyers who need a consistent, handleable fuel form with defined stacking and packing behaviour.
+              - list "Typical applications" [ref=e155]:
+                - listitem [ref=e156]: BBQ & grilling
+                - listitem [ref=e157]: Household fuel
+                - listitem [ref=e158]: Retail packs
+            - generic [ref=e159]:
+              - generic [ref=e160]:
+                - heading "Specification" [level=4] [ref=e161]
+                - paragraph [ref=e162]: Moisture, ash, fixed carbon and volatile matter are confirmed per grade and issued with the quotation rather than published as a general range.
+              - link "Request Specifications" [ref=e164] [cursor=pointer]:
+                - /url: "#quote"
+        - article [ref=e168]:
+          - generic [ref=e169]:
+            - img "Dark bed of broken industrial charcoal with glowing embers between the pieces" [ref=e170]
+            - generic [ref=e171]: Bulk Supply
+          - generic [ref=e172]:
+            - generic [ref=e173]:
+              - heading "Industrial-Grade Coconut Charcoal" [level=3] [ref=e174]
+              - paragraph [ref=e175]: Graded shell charcoal positioned for industrial fuel users and bulk purchasers who require defined volumes and packing configurations.
+              - list "Typical applications" [ref=e176]:
+                - listitem [ref=e177]: Industrial fuel
+                - listitem [ref=e178]: Power generation
+                - listitem [ref=e179]: Bulk distribution
+            - generic [ref=e180]:
+              - generic [ref=e181]:
+                - heading "Specification" [level=4] [ref=e182]
+                - paragraph [ref=e183]: Moisture, ash, fixed carbon and volatile matter are confirmed per grade and issued with the quotation rather than published as a general range.
+              - link "Request Specifications" [ref=e185] [cursor=pointer]:
+                - /url: "#quote"
+    - generic [ref=e189]:
+      - generic [ref=e191]:
+        - paragraph [ref=e192]: Why Work With Us
+        - heading "Trade With Confidence." [level=2] [ref=e193]
+        - paragraph [ref=e194]: Four things we treat as part of the product, not an extra. Each one exists because a cross-border buyer cannot see or verify anything until the cargo arrives.
+      - list [ref=e196]:
+        - listitem [ref=e197]:
+          - paragraph [aria-hidden] [ref=e198]: "01"
+          - heading "Sourcing Transparency" [level=3] [ref=e199]
+          - paragraph [ref=e200]: You are told where a shipment originates and what was checked before it was offered, so you can assess the supply instead of taking it on trust.
+        - listitem [ref=e201]:
+          - paragraph [aria-hidden] [ref=e202]: "02"
+          - heading "Product Information" [level=3] [ref=e203]
+          - paragraph [ref=e204]: Specifications, form, grade and packaging are set out in writing before a quotation is issued, so both sides quote from the same document.
+        - listitem [ref=e205]:
+          - paragraph [aria-hidden] [ref=e206]: "03"
+          - heading "Bulk Order Coordination" [level=3] [ref=e207]
+          - paragraph [ref=e208]: Order volume, packaging configuration and loading arrangements are agreed up front, and confirmed back to you in writing.
+        - listitem [ref=e209]:
+          - paragraph [aria-hidden] [ref=e210]: "04"
+          - heading "Responsive Communication" [level=3] [ref=e211]
+          - paragraph [ref=e212]: Enquiries receive a clear answer about what is available and what is still being confirmed, rather than a delay without explanation.
+    - generic [ref=e214]:
+      - generic [ref=e215]:
+        - generic [ref=e216]:
+          - paragraph [ref=e217]: Quality & Sourcing
+          - heading "Know What You're Buying." [level=2] [ref=e218]
+          - paragraph [ref=e219]: Charcoal is not a standardised product the way a manufactured component is. Two shipments of the same nominal grade can differ. The job of a supplier is to make those differences explicit rather than let a buyer discover them at discharge.
+        - list [ref=e220]:
+          - listitem [ref=e221]:
+            - generic [ref=e224]: Specification figures are issued per grade against the quotation, so the numbers you receive match the cargo you buy.
+          - listitem [ref=e225]:
+            - generic [ref=e228]: Packaging configuration is agreed in writing before production, including bag weight and stacking arrangement.
+          - listitem [ref=e229]:
+            - generic [ref=e232]: Inspection points — form, grading, moisture check, packaging — are defined before the order is released.
+          - listitem [ref=e233]:
+            - generic [ref=e236]: Order requirements are restated back to you in writing, so both sides work from the same document.
+        - generic [ref=e237]:
+          - paragraph [ref=e238]: Documentation
+          - paragraph [ref=e239]: These documents are released per shipment once prepared and approved. Request them with your inquiry and we will confirm which apply to your order.
+          - list [ref=e240]:
+            - listitem [ref=e241]: Product Test Reports
+            - listitem [ref=e245]: Certificates
+            - listitem [ref=e249]: Technical Data Sheets
+            - listitem [ref=e253]: Packaging Information
+            - listitem [ref=e257]: Inspection Procedures
+      - generic [ref=e262]:
+        - figure "Form and grading — checked by hand before packing" [ref=e263]:
+          - img "Close-up of charcoal lumps being handled during a manual check" [ref=e264]
+        - figure "Shell wall thickness — determines charcoal hardness" [ref=e266]:
+          - img "Cut coconut shells showing the hard shell wall used for carbonisation" [ref=e267]
+        - figure "Raw shell input — the origin of the charcoal grade" [ref=e269]:
+          - img "Pile of raw coconut husks and shell fragments before carbonisation" [ref=e270]
+    - generic [ref=e273]:
+      - generic [ref=e274]:
+        - generic [ref=e275]:
+          - generic [ref=e276]:
+            - paragraph [ref=e277]: Global Trade
+            - heading "Connecting Supply With Demand." [level=2] [ref=e278]
+            - paragraph [ref=e279]: Charcoal moves as a bulk commodity. The commercial terms — Incoterm, destination, packaging and loading — decide as much about a shipment as the product itself, so they are agreed before anything is loaded.
+          - generic [ref=e280]:
+            - figure "Port handling and container loading" [ref=e281]:
+              - img "Container terminal with gantry cranes and stacked containers at dusk" [ref=e282]
+            - figure "Loading supervision before sealing" [ref=e284]:
+              - img "Worker checking a container being loaded with stacked sacks at a port" [ref=e285]
+            - figure "Origin material staged for export" [ref=e287]:
+              - img "Raw coconut husk material stacked for shipment preparation" [ref=e288]
+        - generic [ref=e290]:
+          - figure [ref=e291]:
+            - img "Container vessel alongside a port berth at sunset, stacked containers visible on deck" [ref=e292]
+          - generic [ref=e293]:
+            - generic [ref=e294]:
+              - term [ref=e295]: Country of Origin
+              - definition [ref=e296]: Confirmed per inquiry
+            - generic [ref=e297]:
+              - term [ref=e298]: Destination Markets
+              - definition [ref=e299]: Confirmed per inquiry
+            - generic [ref=e300]:
+              - term [ref=e301]: Incoterms Discussed
+              - definition [ref=e302]: Confirmed per inquiry
+            - generic [ref=e303]:
+              - term [ref=e304]: Shipping Options
+              - definition [ref=e305]: Confirmed per inquiry
+            - generic [ref=e306]:
+              - term [ref=e307]: Estimated Lead Time
+              - definition [ref=e308]: Confirmed per inquiry
+            - generic [ref=e309]:
+              - term [ref=e310]: Minimum Order Volume
+              - definition [ref=e311]: Confirmed per inquiry
+      - generic [ref=e313]:
+        - paragraph [ref=e314]: How It Works
+        - heading "From Inquiry To Shipment" [level=2] [ref=e315]
+      - list [ref=e317]:
+        - listitem [ref=e318]:
+          - heading "Submit Your Requirements" [level=3] [ref=e319]
+          - paragraph [ref=e320]: Send the product form, indicative volume and destination through the inquiry form.
+        - listitem [ref=e321]:
+          - heading "Discuss Specifications" [level=3] [ref=e322]
+          - paragraph [ref=e323]: We confirm form, grade, packaging and order quantity against what can be supplied.
+        - listitem [ref=e324]:
+          - heading "Confirm Quotation" [level=3] [ref=e325]
+          - paragraph [ref=e326]: Price, commercial terms and Incoterm are agreed and recorded in writing.
+        - listitem [ref=e327]:
+          - heading "Coordinate Shipment" [level=3] [ref=e328]
+          - paragraph [ref=e329]: Documentation and shipping arrangements are finalised and confirmed before departure.
+    - generic [ref=e331]:
+      - generic [ref=e332]:
+        - generic [ref=e333]:
+          - paragraph [ref=e334]: Bulk Inquiry
+          - heading "Let's Discuss Your Next Shipment." [level=2] [ref=e335]
+          - paragraph [ref=e336]: The more specific your requirement, the more specific the quotation. Send us what you know and we will fill in the rest.
+        - list [ref=e337]:
+          - listitem [ref=e338]:
+            - generic [ref=e344]: Tell us the destination and quantity and the quotation is built around your actual movement.
+          - listitem [ref=e345]:
+            - generic [ref=e349]: Specification, grade and packaging are confirmed in writing before commercial terms are agreed.
+          - listitem [ref=e350]:
+            - generic [ref=e354]: You will get a reply that answers the question or tells you plainly what is still being confirmed.
+      - generic [ref=e356]:
+        - status
+        - generic [ref=e357]:
+          - generic [ref=e358]:
+            - generic [ref=e359]: Full name*
+            - textbox "Full name" [ref=e360]:
+              - /placeholder: Jane Okafor
+          - generic [ref=e361]:
+            - generic [ref=e362]: Company name*
+            - textbox "Company name" [ref=e363]:
+              - /placeholder: Company Ltd.
+          - generic [ref=e364]:
+            - generic [ref=e365]: Business email*
+            - textbox "Business email" [ref=e366]:
+              - /placeholder: name@company.com
+          - generic [ref=e367]:
+            - generic [ref=e368]: Phone number*
+            - textbox "Phone number" [ref=e369]:
+              - /placeholder: +234 800 000 0000
+            - paragraph [ref=e370]: Include your country code.
+          - generic [ref=e371]:
+            - generic [ref=e372]: Country
+            - combobox "Country" [ref=e373]:
+              - option "Not specified" [selected]
+              - option "Bangladesh"
+              - option "Brazil"
+              - option "Egypt"
+              - option "Germany"
+              - option "India"
+              - option "Indonesia"
+              - option "Italy"
+              - option "Japan"
+              - option "Mexico"
+              - option "Netherlands"
+              - option "Pakistan"
+              - option "Saudi Arabia"
+              - option "South Korea"
+              - option "Spain"
+              - option "Thailand"
+              - option "Türkiye"
+              - option "United Arab Emirates"
+              - option "United Kingdom"
+              - option "United States"
+              - option "Vietnam"
+              - option "Other"
+          - generic [ref=e374]:
+            - generic [ref=e375]: Product of interest
+            - combobox "Product of interest" [ref=e376]:
+              - option "Coconut Shell Charcoal" [selected]
+              - option "Coconut Shell Charcoal Briquettes"
+              - option "Industrial-Grade Coconut Charcoal"
+              - option "Multiple products"
+              - option "Not decided yet"
+          - generic [ref=e377]:
+            - generic [ref=e378]: Estimated order quantity
+            - combobox "Estimated order quantity" [ref=e379]:
+              - option "1 × 20ft container" [selected]
+              - option "1 × 40ft container"
+              - option "Multiple containers"
+              - option "Bulk break-bulk"
+              - option "Trial / sample quantity"
+              - option "Not specified"
+          - generic [ref=e380]:
+            - generic [ref=e381]: Packaging preference
+            - combobox "Packaging preference" [ref=e382]:
+              - option "Not specified" [selected]
+              - option "PP bags"
+              - option "Burlap / woven sacks"
+              - option "Cartons"
+              - option "Bulk / containerised"
+              - option "Custom packaging"
+          - generic [ref=e383]:
+            - generic [ref=e384]: Destination port or delivery location*
+            - textbox "Destination port or delivery location" [ref=e385]:
+              - /placeholder: Port, terminal or city, with country
+          - generic [ref=e386]:
+            - generic [ref=e387]: Additional requirements
+            - textbox "Additional requirements" [ref=e388]:
+              - /placeholder: Anything we should factor into the quotation.
+            - paragraph [ref=e389]: Grade, packaging detail, delivery schedule, documentation you need.
+        - generic [aria-hidden] [ref=e390]:
+          - text: Company website — leave this field empty
+          - textbox [ref=e391]
+        - generic [ref=e392]:
+          - button "Submit Business Inquiry" [ref=e393] [cursor=pointer]
+          - paragraph [ref=e396]: No delivery endpoint is configured on this site yet, so submitting opens your email client. Nothing is sent from this site.
+    - generic [ref=e401]:
+      - generic [ref=e403]:
+        - paragraph [ref=e404]: FAQ
+        - heading "Questions Buyers Ask." [level=2] [ref=e405]
+        - paragraph [ref=e406]: Straight answers, including the ones we can only confirm per inquiry.
+      - generic [ref=e408]:
+        - generic [ref=e409]:
+          - heading [level=3] [ref=e410]:
+            - button "What is coconut shell charcoal?" [expanded] [ref=e411] [cursor=pointer]
+          - region "What is coconut shell charcoal?" [ref=e416]:
+            - paragraph [ref=e419]: Coconut shell charcoal is a hard charcoal produced by carbonising the hard shell of the coconut rather than the soft inner husk. Because the shell is a dense material, the resulting charcoal is heavier and harder than wood charcoal for a similar size, which is why it is widely used for grilling, BBQ and industrial fuel applications.
+        - generic [ref=e420]:
+          - heading [level=3] [ref=e421]:
+            - button "What product forms are available?" [ref=e422] [cursor=pointer]
+          - region "What product forms are available?":
+            - paragraph [ref=e426]: "We list three product lines: coconut shell charcoal in lump form, formed briquettes, and industrial-grade coconut charcoal. Use the product filter on the inquiry form to indicate the form you are interested in, and we will confirm availability and specification for it."
+        - generic [ref=e427]:
+          - heading [level=3] [ref=e428]:
+            - button "Can buyers request product specifications?" [ref=e429] [cursor=pointer]
+          - region "Can buyers request product specifications?":
+            - paragraph [ref=e433]: Yes. Request specifications through the inquiry form with your product of interest and indicative volume. Specification figures are shared against the grade being quoted rather than published as a general range, because they vary by batch and grade.
+        - generic [ref=e434]:
+          - heading [level=3] [ref=e435]:
+            - button "Are bulk orders accepted?" [ref=e436] [cursor=pointer]
+          - region "Are bulk orders accepted?":
+            - paragraph [ref=e440]: Bulk inquiries are the core of the business. Include your estimated order quantity and destination in the inquiry form so the quotation can be prepared against the actual movement rather than a generic price list.
+        - generic [ref=e441]:
+          - heading [level=3] [ref=e442]:
+            - button "Which packaging options are available?" [ref=e443] [cursor=pointer]
+          - region "Which packaging options are available?":
+            - paragraph [ref=e447]: Packaging is confirmed per order against form, quantity and destination. State your packaging preference in the inquiry form and we will confirm what can be arranged for that shipment.
+        - generic [ref=e448]:
+          - heading [level=3] [ref=e449]:
+            - button "How can I request a quotation?" [ref=e450] [cursor=pointer]
+          - region "How can I request a quotation?":
+            - paragraph [ref=e454]: Use the inquiry form on this page. The more detail you provide — product form, quantity, packaging preference and destination — the more specific the quotation can be. You will get a response that either answers the question or tells you what is still being confirmed.
+        - generic [ref=e455]:
+          - heading [level=3] [ref=e456]:
+            - button "Which countries and ports can the company serve?" [ref=e457] [cursor=pointer]
+          - region "Which countries and ports can the company serve?":
+            - paragraph [ref=e461]: Shipment destinations are confirmed case by case against origin, quantity and the commercial terms agreed. Provide your destination port in the inquiry form and we will confirm what is workable for that route.
+        - generic [ref=e462]:
+          - heading [level=3] [ref=e463]:
+            - button "What documentation is available?" [ref=e464] [cursor=pointer]
+          - region "What documentation is available?":
+            - paragraph [ref=e468]: Documentation such as test reports, technical data sheets and inspection records is released per shipment once it has been prepared and approved for release. Request the documents you need with your inquiry and we will confirm which apply to your order.
+    - generic [ref=e470]:
+      - generic [ref=e472]:
+        - paragraph [ref=e473]: Contact
+        - heading "Talk To The Trade Desk." [level=2] [ref=e474]
+        - paragraph [ref=e475]: Direct business enquiries are answered by the people handling them. Use the inquiry form for a quotation, or reach us through the channels below once they are published.
+      - generic [ref=e476]:
+        - generic [ref=e478]:
+          - paragraph [ref=e483]: Business Email
+          - paragraph [ref=e484]: To be confirmed — this detail has not been published yet.
+          - generic [ref=e485]: Awaiting company detail
+          - link "Send an inquiry instead" [ref=e486] [cursor=pointer]:
+            - /url: "#quote"
+          - paragraph [ref=e489]: Add your monitored business address to enable direct email.
+        - generic [ref=e491]:
+          - paragraph [ref=e495]: Telephone
+          - paragraph [ref=e496]: To be confirmed — this detail has not been published yet.
+          - generic [ref=e497]: Awaiting company detail
+          - link "Send an inquiry instead" [ref=e498] [cursor=pointer]:
+            - /url: "#quote"
+        - generic [ref=e502]:
+          - paragraph [ref=e506]: WhatsApp
+          - paragraph [ref=e507]: To be confirmed — this detail has not been published yet.
+          - generic [ref=e508]: Awaiting company detail
+          - link "Send an inquiry instead" [ref=e509] [cursor=pointer]:
+            - /url: "#quote"
+        - generic [ref=e513]:
+          - paragraph [ref=e518]: Office Address
+          - paragraph [ref=e519]: To be confirmed — this detail has not been published yet.
+          - generic [ref=e520]: Awaiting company detail
+          - link "Send an inquiry instead" [ref=e521] [cursor=pointer]:
+            - /url: "#quote"
+        - generic [ref=e525]:
+          - paragraph [ref=e530]: Business Hours
+          - paragraph [ref=e531]: To be confirmed — this detail has not been published yet.
+          - generic [ref=e532]: Awaiting company detail
+          - link "Send an inquiry instead" [ref=e533] [cursor=pointer]:
+            - /url: "#quote"
+        - generic [ref=e537]:
+          - paragraph [ref=e542]: Company Registration
+          - paragraph [ref=e543]: To be confirmed — this detail has not been published yet.
+          - generic [ref=e544]: Awaiting company detail
+          - link "Send an inquiry instead" [ref=e545] [cursor=pointer]:
+            - /url: "#quote"
+  - contentinfo [ref=e548]:
+    - generic [ref=e549]:
+      - generic [ref=e550]:
+        - generic [ref=e551]:
+          - generic [ref=e553]:
+            - generic [ref=e554]: Ocean Spark International
+            - generic [ref=e555]: Charcoal & Trade
+          - paragraph [ref=e556]: From Coconut Shell to Global Markets. Ocean Spark International sources and trades coconut shell charcoal for business buyers, wholesalers, distributors and industrial clients.
+        - navigation "Footer" [ref=e557]:
+          - heading "Navigate" [level=3] [ref=e558]
+          - list [ref=e559]:
+            - listitem [ref=e560]:
+              - link "About Us" [ref=e561] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=e562]:
+              - link "Products" [ref=e563] [cursor=pointer]:
+                - /url: "#products"
+            - listitem [ref=e564]:
+              - link "Quality & Sourcing" [ref=e565] [cursor=pointer]:
+                - /url: "#quality"
+            - listitem [ref=e566]:
+              - link "Request a Quote" [ref=e567] [cursor=pointer]:
+                - /url: "#quote"
+            - listitem [ref=e568]:
+              - link "Contact" [ref=e569] [cursor=pointer]:
+                - /url: "#contact"
+            - listitem [ref=e570]:
+              - generic [ref=e571]: Privacy Policy (to be published)
+        - generic [ref=e572]:
+          - heading "Contact" [level=3] [ref=e573]
+          - paragraph [ref=e575]: Business contact details to be published.
+      - generic [ref=e576]:
+        - paragraph [ref=e577]: © 2026 Ocean Spark International. All rights reserved.
+        - paragraph [ref=e578]:
+          - link "Back to top" [ref=e579] [cursor=pointer]:
+            - /url: "#top"
+  - button [aria-hidden]

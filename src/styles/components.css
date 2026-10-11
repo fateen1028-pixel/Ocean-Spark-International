@@ -1,0 +1,2304 @@
+﻿/* ============================================================
+   Ocean Spark International â€” section + component styles
+   ============================================================ */
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.9375rem 1.5rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 0.25s var(--ease),
+    border-color 0.25s var(--ease),
+    color 0.25s var(--ease),
+    transform 0.25s var(--ease);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn--primary {
+  background: var(--cyan);
+  color: var(--navy);
+  border-color: var(--cyan);
+}
+
+.btn--primary:hover {
+  background: #5fc0d9;
+  border-color: #5fc0d9;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--navy);
+  border-color: var(--line-strong);
+}
+
+.btn--ghost:hover {
+  border-color: var(--navy);
+  background: rgba(5, 48, 92, 0.045);
+}
+
+.btn--on-dark {
+  background: transparent;
+  color: var(--ivory);
+  border-color: rgba(245, 242, 234, 0.38);
+}
+
+.btn--on-dark:hover {
+  background: rgba(245, 242, 234, 0.1);
+  border-color: var(--ivory);
+}
+
+.btn--small {
+  padding: 0.625rem 1rem;
+  font-size: var(--fs-sm);
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn__icon {
+  flex: none;
+  transition: transform 0.25s var(--ease);
+}
+
+.btn:hover .btn__icon {
+  transform: translateX(3px);
+}
+
+/* ---------- Header / nav ---------- */
+
+.header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 50;
+  height: var(--nav-h);
+  /* The inset is padding, not height: the bar itself stays --nav-h tall and
+     starts below the status bar instead of under it. */
+  padding-top: env(safe-area-inset-top, 0px);
+  display: flex;
+  align-items: center;
+  color: var(--ivory);
+  /* Transparent over the hero photograph; .is-past takes over below it. */
+  background: transparent;
+  transition:
+    background-color 0.3s var(--ease),
+    backdrop-filter 0.3s var(--ease),
+    border-color 0.3s var(--ease);
+  border-bottom: 1px solid transparent;
+}
+
+.header.is-past {
+  background: rgba(5, 48, 92, 0.82);
+  backdrop-filter: blur(14px);
+  border-bottom-color: rgba(245, 242, 234, 0.12);
+}
+
+.header__inner {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  display: flex;
+  align-items: center;
+  /* The links sit in optical balance between the identity and the action.
+     Pushing the action out with margin-left:auto instead left the group
+     hard against the brand with a void beside the CTA, which reads as a
+     mistake rather than a decision. */
+  justify-content: space-between;
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: inherit;
+  text-decoration: none;
+  flex: none;
+}
+
+.brand__mark {
+  flex: none;
+  height: 34px;
+  width: auto;
+}
+
+.brand__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.brand__name {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  color: var(--ivory);
+}
+
+.brand__sub {
+  font-size: 0.625rem;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  /* Tighter than a typical nav so the seven links read as one set item
+     rather than a row of evenly-pitched words, and allowed to breathe a
+     little on wide screens so the group never looks cramped. */
+  gap: clamp(1.15rem, 1.5vw, 1.9rem);
+  /* Never let the bar squeeze the labels — they keep their natural width and
+     the breakpoint below handles the tight case instead. */
+  flex: none;
+  list-style: none;
+  padding: 0;
+}
+
+.nav__link {
+  position: relative;
+  font-size: 0.875rem;
+  color: rgba(245, 242, 234, 0.82);
+  text-decoration: none;
+  padding-block: 0.4rem;
+  white-space: nowrap;
+  transition: color 0.2s var(--ease);
+}
+
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--cyan);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease);
+}
+
+.nav__link:hover {
+  color: var(--ivory);
+}
+
+.nav__link:hover::after {
+  transform: scaleX(1);
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: none;
+}
+
+.nav__toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid rgba(245, 242, 234, 0.28);
+  border-radius: var(--radius);
+  color: var(--ivory);
+}
+
+.nav__toggle-bars {
+  position: relative;
+  width: 18px;
+  height: 12px;
+}
+
+.nav__toggle-bars span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: currentColor;
+  transition: transform 0.3s var(--ease), opacity 0.2s var(--ease);
+}
+
+.nav__toggle-bars span:nth-child(1) {
+  top: 0;
+}
+.nav__toggle-bars span:nth-child(2) {
+  top: 5px;
+}
+.nav__toggle-bars span:nth-child(3) {
+  bottom: 0;
+}
+
+.nav__toggle[aria-expanded="true"] .nav__toggle-bars span:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+.nav__toggle[aria-expanded="true"] .nav__toggle-bars span:nth-child(2) {
+  opacity: 0;
+}
+.nav__toggle[aria-expanded="true"] .nav__toggle-bars span:nth-child(3) {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+/* Mobile drawer */
+.nav__drawer {
+  position: fixed;
+  inset: var(--nav-h) 0 0;
+  z-index: 45;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem max(var(--gutter), env(safe-area-inset-left, 0px))
+    calc(2.5rem + env(safe-area-inset-bottom, 0px))
+    max(var(--gutter), env(safe-area-inset-right, 0px));
+  background: var(--dark-bg-deep);
+  border-top: 1px solid var(--dark-line);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.nav__drawer[hidden] {
+  display: none;
+}
+
+.nav__drawer a {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--ivory);
+  text-decoration: none;
+  padding-block: 0.5rem;
+  border-bottom: 1px solid rgba(245, 242, 234, 0.09);
+}
+
+.nav__drawer a:hover {
+  color: var(--cyan);
+}
+
+.nav__drawer .btn {
+  margin-top: 1.25rem;
+  width: 100%;
+}
+
+body.is-locked {
+  overflow: hidden;
+}
+
+/* The seven links need ~545px of their own. Below 1120 the row runs out of
+   room and the labels start breaking mid-phrase ("About / Us"), so the full
+   bar only appears once it genuinely fits — see the matching
+   matchMedia("(min-width: 1120px)") in Navbar.tsx. */
+@media (max-width: 1119px) {
+  .nav__links,
+  .header__actions .btn {
+    display: none;
+  }
+
+  .nav__toggle {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 1120px) {
+  .nav__drawer {
+    display: none;
+  }
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  background: var(--dark-bg);
+  color: var(--dark-ink);
+  overflow: hidden;
+  isolation: isolate;
+  /* Capped rather than a full viewport. At 100svh the copy was centred in a
+     1000px+ frame, leaving 250-300px of empty image above the eyebrow and the
+     same again below the meta line. Sizing the hero to its content keeps the
+     fold on the opening composition instead. The 44rem floor preserves the
+     full-bleed feel on wide screens where the copy is short. */
+  min-height: min(100svh, 44rem);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Full-bleed photograph or clip behind the whole hero. */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 62% 50%;
+}
+
+/* The clip is decoration: it carries no information the copy does not, and it
+   sits behind a scrim, so it is held back slightly. */
+video.hero__bg {
+  filter: saturate(0.95) contrast(1.05) brightness(1.05);
+}
+
+/* Scrim: heavy under the copy on the left, opening up fast so the clip is
+   actually visible on the right. The first gradient is the legibility floor;
+   the others only tint. The vignette is what keeps the corners of the
+   firebox frame out of shot. */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(58% 84% at 4% 58%, rgba(2, 18, 36, 0.66), transparent 72%),
+    radial-gradient(112% 88% at 52% 48%, transparent 34%, rgba(2, 18, 36, 0.94) 100%),
+    linear-gradient(
+      90deg,
+      rgba(2, 18, 36, 0.94) 0%,
+      rgba(2, 18, 36, 0.86) 24%,
+      rgba(2, 18, 36, 0.6) 44%,
+      rgba(2, 18, 36, 0.26) 62%,
+      rgba(2, 18, 36, 0.06) 78%,
+      rgba(2, 18, 36, 0) 88%
+    ),
+    radial-gradient(120% 80% at 78% 8%, rgba(122, 211, 230, 0.09), transparent 62%),
+    radial-gradient(90% 70% at 2% 100%, rgba(245, 184, 0, 0.14), transparent 56%),
+    linear-gradient(160deg, rgba(5, 48, 92, 0.28) 0%, rgba(3, 28, 52, 0.06) 45%, rgba(16, 26, 36, 0.3) 100%);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(245, 242, 234, 0.035) 0 1px,
+    transparent 1px 4px
+  );
+}
+
+.hero__inner {
+  flex: 1;
+  min-height: 0;
+  /* Clear the fixed header, then hold the copy just above centre. The padding
+     is closer to symmetric than before: an oversized top pad combined with
+     centring was what stacked dead space above the eyebrow. */
+  padding-top: calc(var(--nav-h) + clamp(1.5rem, 3vh, 3rem));
+  padding-bottom: clamp(2.5rem, 5vh, 5rem);
+  display: grid;
+  align-items: center;
+}
+
+/* Editorial rhythm. A single uniform gap between every block is the clearest
+   sign of a layout that was assembled rather than composed — the spacing here
+   changes with the relationship between the elements, not with a template. */
+.hero__copy .eyebrow {
+  /* The label belongs to the headline, so it sits close to it. */
+  margin-bottom: clamp(0.6rem, 0.4rem + 0.5vw, 1.1rem);
+}
+
+/* `.hero` is not `.section--dark`, so the dark-surface rule never reaches it
+   and the eyebrow was taking the deep gold meant for ivory — 2.35:1 on the
+   navy. Flame is the same mark colour at full brightness: 7.4:1. */
+.hero .eyebrow {
+  color: var(--flame);
+}
+
+.hero__title {
+  margin-bottom: clamp(1.1rem, 0.7rem + 1vw, 1.9rem);
+  color: var(--ivory);
+  /* Two balanced lines: "Whole-shell charcoal," / "imported from Thailand." */
+  max-width: 21ch;
+  /* The inherited 1.06 crowds the italic line's ascenders against the line
+     above. Just enough air to set them apart without losing the display feel. */
+  line-height: 1.09;
+  /* Cap by height as well as width: a wide but short window must not push
+     the hero past the fold. */
+  font-size: min(var(--fs-display), 8.6vh);
+}
+
+.hero__title em {
+  font-style: italic;
+  color: var(--cyan);
+}
+
+.hero__lead {
+  /* A full zone of its own between the headline and the actions. */
+  margin-bottom: clamp(1.6rem, 1rem + 1.6vw, 2.75rem);
+  color: rgba(245, 242, 234, 0.74);
+  max-width: 42ch;
+  font-size: var(--fs-lead);
+  line-height: 1.6;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.75rem;
+  /* Hug the buttons rather than spanning the full container. */
+  width: fit-content;
+  max-width: 100%;
+}
+
+/* Secondary action, hero only (.btn--on-dark appears nowhere else).
+   Two equal boxes at equal weight is the stock landing-page pairing; the
+   quieter mark lets the primary carry the emphasis on its own. No new colour
+   and no decoration — the existing cyan does the work. */
+.hero__actions .btn--on-dark {
+  padding-inline: 0;
+  border: 0;
+  background: none;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: rgba(245, 242, 234, 0.86);
+  /* Underline the glyphs themselves. An inset box-shadow would sit on the
+     bottom of the button box, which floats clear of the text. */
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+  text-decoration-color: rgba(245, 242, 234, 0.4);
+}
+
+.hero__actions .btn--on-dark:hover {
+  color: var(--ivory);
+  background: none;
+  text-decoration-color: var(--cyan);
+}
+
+.hero__actions .btn--on-dark::after {
+  display: none;
+}
+
+/* Set in sentence case rather than the eyebrow's letterspaced caps, so the two
+   small lines no longer read as the same label repeated. */
+.hero__meta {
+  margin-top: clamp(1.1rem, 0.8rem + 0.8vw, 1.75rem);
+  max-width: 42ch;
+  font-size: 0.8125rem;
+  letter-spacing: 0.01em;
+  /* 0.62 is the first step that clears 4.5:1 for 13px text on the navy. */
+  color: rgba(245, 242, 234, 0.62);
+}
+
+/* The global focus ring is the light-surface teal, which disappears on the
+   hero. Ivory is the readable equivalent here. */
+.hero :where(a, button, input, select, textarea, summary):focus-visible {
+  outline-color: var(--ivory);
+}
+
+/* ---------- Hero entrance ----------
+   One short rise per block, staggered. Opacity and a small translate only —
+   no scale, no blur, nothing that costs a paint. The reveal is gated on a
+   class the component adds after mount, so it never plays before the copy
+   exists, and the whole thing is switched off under reduced motion. */
+
+.hero__copy > * {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.hero__copy.is-ready > * {
+  animation: hero-rise 0.85s var(--ease) forwards;
+}
+
+.hero__copy.is-ready > *:nth-child(1) { animation-delay: 60ms; }
+.hero__copy.is-ready > *:nth-child(2) { animation-delay: 160ms; }
+.hero__copy.is-ready > *:nth-child(3) { animation-delay: 280ms; }
+.hero__copy.is-ready > *:nth-child(4) { animation-delay: 380ms; }
+.hero__copy.is-ready > *:nth-child(5) { animation-delay: 470ms; }
+
+@keyframes hero-rise {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* The hidden starting state must not survive when the entrance never runs,
+   or the hero copy would simply be invisible. */
+@media (prefers-reduced-motion: reduce) {
+  .hero__copy > * {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- Business highlights ---------- */
+
+.highlights {
+  background: var(--bg-raised);
+  border-bottom: 1px solid var(--line);
+}
+
+.highlights__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.highlight {
+  background: var(--bg-raised);
+  padding: clamp(1.5rem, 1rem + 1.4vw, 2.25rem) clamp(1.25rem, 1rem + 0.8vw, 1.75rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  transition: background-color 0.3s var(--ease);
+}
+
+.highlight:hover {
+  background: var(--bg-sunken);
+}
+
+.highlight__icon {
+  color: var(--teal);
+}
+
+.highlight__title {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: var(--navy);
+}
+
+.highlight__note {
+  font-size: var(--fs-sm);
+  color: var(--ink-muted);
+  line-height: 1.55;
+}
+
+/* ---------- About ---------- */
+
+.about__grid {
+  display: grid;
+  gap: clamp(2rem, 1rem + 4vw, 4.5rem);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .about__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about__copy > * + * {
+  margin-top: 1.35rem;
+}
+
+.about__points {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.about__points li {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  font-size: 0.9375rem;
+  color: var(--ink-muted);
+}
+
+.about__points svg {
+  flex: none;
+  margin-top: 3px;
+  color: var(--cyan);
+  background: var(--navy);
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.about__media {
+  position: relative;
+}
+
+.about__media img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.about__media-note {
+  margin-top: 0.9rem;
+  font-size: var(--fs-sm);
+  color: var(--ink-faint);
+}
+
+/* ---------- Origin ---------- */
+
+/* White band between two ivory sections, matching the .why / .faq language.
+   Image sits left at a portrait ratio so it never reads as a second About. */
+.origin {
+  background: var(--bg-raised);
+  border-block: 1px solid var(--line);
+}
+
+.origin__grid {
+  display: grid;
+  gap: clamp(2rem, 1rem + 4vw, 4rem);
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .origin__grid {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+    column-gap: clamp(2.5rem, 1.5rem + 3vw, 5rem);
+  }
+}
+
+.origin__media img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.origin__caption {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: var(--fs-sm);
+  color: var(--ink-faint);
+}
+
+.origin__caption span {
+  font-size: var(--fs-xs);
+  opacity: 0.75;
+}
+
+.origin__copy > * + * {
+  margin-top: 1.4rem;
+}
+
+.origin__facts {
+  display: grid;
+  gap: 1px;
+  margin: 0;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+@media (min-width: 560px) {
+  .origin__facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.origin__fact {
+  background: var(--bg);
+  padding: 0.95rem 1.15rem;
+}
+
+/* An odd trailing item spans the row instead of leaving a dead cell. */
+.origin__fact:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.origin__fact dt {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.origin__fact dd {
+  margin: 0.35rem 0 0;
+  font-size: 0.9375rem;
+  color: var(--navy);
+}
+
+/* ---------- Products ---------- */
+
+.products {
+  background: var(--bg);
+}
+
+/* One photographed line, wide. The remaining lines are an enquiry list below
+   rather than a grid of cards, because there is no accurate photograph of
+   them and repeating the core image across three cards read as padding. */
+.products__featured {
+  margin-top: clamp(2.25rem, 1.5rem + 2.5vw, 3.5rem);
+}
+
+@media (min-width: 1080px) {
+  .products__featured .product-card__body {
+    display: grid;
+    grid-template-columns: 1.02fr 0.98fr;
+    gap: clamp(1.5rem, 1rem + 2vw, 2.75rem);
+    align-items: start;
+  }
+
+  .products__featured .product-card__detail {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+}
+
+@media (min-width: 720px) {
+  .products__featured .product-card__media img {
+    aspect-ratio: 21 / 8;
+  }
+}
+
+.products__lines {
+  margin-top: clamp(1.75rem, 1.25rem + 1.5vw, 2.5rem);
+}
+
+.products__lines-title {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 1rem;
+}
+
+.products__lines-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+@media (min-width: 860px) {
+  .products__lines-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.product-line {
+  background: var(--bg-raised);
+  padding: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  /* Pushes the link to the bottom so both cards' CTAs sit on one line
+     regardless of how much copy each has. */
+  height: 100%;
+}
+
+.product-line__link {
+  margin-top: auto;
+  padding-top: 0.6rem;
+}
+
+.product-line__head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.product-line__name {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  line-height: 1.25;
+  color: var(--navy);
+}
+
+.product-line__tag {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+
+.product-line__desc {
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+  color: var(--ink-muted);
+  max-width: 46ch;
+}
+
+.product-line__apps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.product-line__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--teal);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 2px;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.product-line__link:hover {
+  color: var(--navy);
+  border-bottom-color: var(--navy);
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition:
+    transform 0.4s var(--ease),
+    box-shadow 0.4s var(--ease),
+    border-color 0.4s var(--ease);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: var(--line-strong);
+}
+
+.product-card__media {
+  position: relative;
+  overflow: hidden;
+  background: var(--charcoal);
+}
+
+.product-card__media img {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+  transition: transform 0.7s var(--ease);
+}
+
+.product-card:hover .product-card__media img {
+  transform: scale(1.035);
+}
+
+.product-card__tag {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+  padding: 0.3rem 0.6rem;
+  background: rgba(2, 26, 51, 0.8);
+  backdrop-filter: blur(6px);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  /* On a dark chip, so the light cyan — the teal is for ivory. */
+  color: var(--cyan);
+}
+
+.product-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: clamp(1.35rem, 1rem + 1vw, 1.85rem);
+  flex: 1;
+}
+
+.product-card__main > * + * {
+  margin-top: 0.85rem;
+}
+
+.product-card__detail {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-card__desc {
+  color: var(--ink-muted);
+  font-size: 0.9375rem;
+  line-height: 1.62;
+}
+
+.product-card__apps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip {
+  padding: 0.3rem 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  background: var(--bg);
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+}
+
+/* Spec table â€” reads like a datasheet, not a marketing table. */
+.spec {
+  margin-top: auto;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--line);
+}
+
+.spec__fallback {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--ink-muted);
+}
+
+.spec__title {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 0.75rem;
+}
+
+.spec__rows {
+  display: grid;
+  gap: 0;
+  margin: 0;
+}
+
+.spec__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding-block: 0.45rem;
+  border-bottom: 1px solid var(--line);
+  font-size: var(--fs-sm);
+}
+
+.spec__row:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.spec__row dt {
+  color: var(--ink-muted);
+  margin: 0;
+}
+
+.spec__row dd {
+  margin: 0;
+  font-weight: 500;
+  color: var(--navy);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.product-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding-top: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+/* Placeholder chip for spec values the company has not supplied yet. */
+.spec__row--pending dd {
+  color: var(--ink-faint);
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* ---------- Why work with us ---------- */
+
+.why {
+  background: var(--bg-raised);
+  border-block: 1px solid var(--line);
+}
+
+.why__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-top: clamp(2.5rem, 1.5rem + 3vw, 4rem);
+}
+
+@media (min-width: 700px) {
+  .why__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1080px) {
+  .why__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.why__card {
+  position: relative;
+  background: var(--bg-raised);
+  padding: clamp(1.6rem, 1.1rem + 1.4vw, 2.25rem);
+  transition: background-color 0.35s var(--ease);
+}
+
+.why__card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: var(--teal);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s var(--ease);
+}
+
+.why__card:hover {
+  background: var(--bg-sunken);
+}
+
+.why__card:hover::before {
+  transform: scaleY(1);
+}
+
+.why__num {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  color: var(--teal);
+  letter-spacing: 0.08em;
+}
+
+.why__card h3 {
+  margin-top: 0.9rem;
+}
+
+.why__card p {
+  margin-top: 0.7rem;
+  font-size: 0.9375rem;
+  color: var(--ink-muted);
+  line-height: 1.62;
+}
+
+/* ---------- Quality ---------- */
+
+.quality {
+  background: var(--dark-bg);
+  color: var(--dark-ink);
+  position: relative;
+  isolation: isolate;
+}
+
+.quality::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+    80% 60% at 85% 15%,
+    rgba(122, 211, 230, 0.13),
+    transparent 60%
+  );
+}
+
+.quality__grid {
+  display: grid;
+  gap: clamp(2.25rem, 1rem + 4vw, 4rem);
+  align-items: start;
+}
+
+@media (min-width: 960px) {
+  .quality__grid {
+    grid-template-columns: 1.05fr 0.95fr;
+  }
+}
+
+.quality__copy > * + * {
+  margin-top: 1.35rem;
+}
+
+.quality__list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1px;
+  background: var(--dark-line);
+  border: 1px solid var(--dark-line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.quality__list li {
+  background: var(--dark-bg);
+  padding: 1rem 1.15rem;
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  font-size: 0.9375rem;
+  color: var(--dark-ink-muted);
+  transition: background-color 0.3s var(--ease);
+}
+
+.quality__list li:hover {
+  background: rgba(122, 211, 230, 0.1);
+}
+
+.quality__list svg {
+  flex: none;
+  margin-top: 3px;
+  color: var(--cyan);
+}
+
+.quality__shots {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9rem;
+}
+
+.quality__shot {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--charcoal);
+}
+
+.quality__shot img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  transition: transform 0.7s var(--ease);
+}
+
+.quality__shot:hover img {
+  transform: scale(1.05);
+}
+
+.quality__shot figcaption {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 1.6rem 0.85rem 0.7rem;
+  background: linear-gradient(to top, rgba(2, 26, 51, 0.9), transparent);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--ivory);
+}
+
+.quality__shot--wide {
+  grid-column: span 2;
+}
+
+.quality__shot--wide img {
+  aspect-ratio: 2 / 1;
+}
+
+/* Document slots â€” deliberately inert until real files are supplied. */
+.docs {
+  margin-top: 1.25rem;
+  padding: clamp(1.25rem, 1rem + 0.8vw, 1.75rem);
+  border: 1px dashed rgba(245, 242, 234, 0.3);
+  border-radius: var(--radius);
+}
+
+.docs__title {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+
+.docs__note {
+  margin-top: 0.6rem;
+  font-size: 0.875rem;
+  color: var(--dark-ink-muted);
+}
+
+.docs__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding: 0;
+  margin-top: 1.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.docs__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(245, 242, 234, 0.22);
+  border-radius: 100px;
+  font-size: 0.8125rem;
+  color: var(--dark-ink-muted);
+}
+
+a.docs__item {
+  color: var(--cyan);
+  border-color: rgba(122, 211, 230, 0.45);
+  text-decoration: none;
+  transition: background-color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+a.docs__item:hover {
+  background: rgba(122, 211, 230, 0.14);
+  border-color: var(--cyan);
+}
+
+/* ---------- Global trade ---------- */
+
+.trade {
+  background: var(--bg);
+}
+
+.trade__top {
+  display: grid;
+  gap: clamp(2rem, 1rem + 4vw, 4rem);
+  align-items: center;
+  margin-bottom: clamp(2.5rem, 1.5rem + 3vw, 4rem);
+}
+
+@media (min-width: 900px) {
+  .trade__top {
+    grid-template-columns: 0.95fr 1.05fr;
+  }
+}
+
+.trade__media {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.trade__media img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.trade__strip {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: clamp(1.5rem, 1rem + 1.5vw, 2.25rem);
+}
+
+@media (min-width: 620px) {
+  .trade__strip {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.trade__strip figure {
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--charcoal);
+}
+
+.trade__strip img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.trade__strip figcaption {
+  padding: 0.7rem 0.85rem;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-top: 0;
+  border-radius: 0 0 var(--radius) var(--radius);
+  font-size: 0.8125rem;
+  color: var(--ink-muted);
+}
+
+/* Process steps */
+.steps {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+@media (min-width: 620px) {
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1080px) {
+  .steps {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* The supply chain has six stages, so a 4-up grid would leave a ragged gap.
+   3-up divides evenly and keeps the same card treatment. */
+@media (min-width: 1080px) {
+  .steps--chain {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 720px) and (max-width: 1079px) {
+  .steps--chain {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Two step lists share this section now; without this the second heading sits
+   directly on the first list's border. */
+.steps + .heading-block {
+  margin-top: clamp(2.75rem, 2rem + 2.5vw, 4.5rem);
+}
+
+.step {
+  counter-increment: step;
+  background: var(--bg-raised);
+  padding: clamp(1.4rem, 1.1rem + 1vw, 1.9rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.step::before {
+  content: "0" counter(step);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--amber);
+}
+
+.step h3 {
+  font-size: 1.0625rem;
+  line-height: 1.3;
+}
+
+.step p {
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+  line-height: 1.58;
+}
+
+/* Editable logistics fields */
+.trade__fields {
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 560px) {
+  .trade__fields {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.trade__field {
+  background: var(--bg-raised);
+  padding: 1rem 1.15rem;
+}
+
+.trade__field dt {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.trade__field dd {
+  margin: 0.35rem 0 0;
+  font-size: 0.9375rem;
+  color: var(--navy);
+}
+
+/* Unconfirmed logistics detail reads as provisional, not as a fact. */
+.trade__field dd.is-pending {
+  color: var(--ink-faint);
+  font-style: italic;
+}
+
+/* ---------- Quote form ---------- */
+
+.quote {
+  background: var(--charcoal);
+  color: var(--dark-ink);
+  position: relative;
+  isolation: isolate;
+}
+
+.quote::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(70% 55% at 12% 0%, rgba(5, 48, 92, 0.95), transparent 62%),
+    linear-gradient(150deg, var(--charcoal) 0%, #0b1219 100%);
+}
+
+.quote__grid {
+  display: grid;
+  gap: clamp(2.25rem, 1rem + 4vw, 4rem);
+  align-items: start;
+}
+
+@media (min-width: 980px) {
+  .quote__grid {
+    grid-template-columns: 0.82fr 1.18fr;
+  }
+}
+
+.quote__aside > * + * {
+  margin-top: 1.3rem;
+}
+
+.quote__aside-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.quote__aside-list li {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  font-size: 0.9375rem;
+  color: var(--dark-ink-muted);
+}
+
+.quote__aside-list svg {
+  flex: none;
+  margin-top: 3px;
+  color: var(--cyan);
+}
+
+.form {
+  background: rgba(245, 242, 234, 0.04);
+  border: 1px solid rgba(245, 242, 234, 0.14);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.35rem, 1rem + 1.6vw, 2.5rem);
+}
+
+.form__grid {
+  display: grid;
+  gap: 1.1rem;
+}
+
+@media (min-width: 620px) {
+  .form__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .field--full {
+    grid-column: 1 / -1;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+.field__label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: rgba(245, 242, 234, 0.9);
+}
+
+.field__label .req {
+  color: var(--cyan);
+  margin-left: 0.15rem;
+}
+
+.field__control {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  background: rgba(2, 26, 51, 0.55);
+  border: 1px solid rgba(245, 242, 234, 0.2);
+  border-radius: var(--radius);
+  color: var(--ivory);
+  font-size: 0.9375rem;
+  transition:
+    border-color 0.2s var(--ease),
+    background-color 0.2s var(--ease);
+}
+
+.field__control::placeholder {
+  color: rgba(245, 242, 234, 0.35);
+}
+
+.field__control:hover {
+  border-color: rgba(245, 242, 234, 0.34);
+}
+
+.field__control:focus {
+  outline: none;
+  border-color: var(--cyan);
+  background: rgba(2, 26, 51, 0.78);
+  box-shadow: 0 0 0 3px rgba(122, 211, 230, 0.18);
+}
+
+/* The filled-field look above signals focus with an 18%-opacity ring, far too
+   faint to meet WCAG focus-contrast minimums against the dark panel. Keyboard
+   focus therefore also gets a real outline — cyan on navy clears 3:1 easily. */
+.field__control:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(122, 211, 230, 0.28);
+}
+
+select.field__control {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--cyan) 50%),
+    linear-gradient(135deg, var(--cyan) 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(50% + 2px),
+    calc(100% - 13px) calc(50% + 2px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  padding-right: 2.25rem;
+}
+
+select.field__control option {
+  background: #0a1a28;
+  color: var(--ivory);
+}
+
+textarea.field__control {
+  min-height: 7.5rem;
+  resize: vertical;
+}
+
+.field[data-invalid="true"] .field__control {
+  border-color: var(--ember-soft);
+}
+
+.field[data-invalid="true"] .field__control:focus {
+  box-shadow: 0 0 0 3px rgba(239, 131, 88, 0.22);
+}
+
+.field[data-invalid="true"] .field__control:focus-visible {
+  outline-color: var(--ember-soft);
+  box-shadow: 0 0 0 3px rgba(239, 131, 88, 0.3);
+}
+
+.field__error {
+  font-size: 0.8125rem;
+  color: var(--ember-soft);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.field__hint {
+  font-size: 0.75rem;
+  color: rgba(245, 242, 234, 0.5);
+}
+
+.form__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.6rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(245, 242, 234, 0.14);
+}
+
+.form__note {
+  flex: 1 1 14rem;
+  font-size: 0.75rem;
+  line-height: 1.55;
+  color: rgba(245, 242, 234, 0.5);
+}
+
+/* Honeypot â€” off-screen, not display:none, so bots still fill it. */
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Status banner */
+.form__status {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  margin-bottom: 1.35rem;
+  border: 1px solid;
+}
+
+.form__status svg {
+  flex: none;
+  margin-top: 2px;
+}
+
+.form__status--success {
+  background: rgba(122, 211, 230, 0.14);
+  border-color: rgba(122, 211, 230, 0.45);
+  color: var(--cyan);
+}
+
+.form__status--error {
+  background: rgba(239, 131, 88, 0.13);
+  border-color: rgba(239, 131, 88, 0.45);
+  color: var(--ember-soft);
+}
+
+.form__status--info {
+  background: rgba(245, 242, 234, 0.07);
+  border-color: rgba(245, 242, 234, 0.2);
+  color: var(--dark-ink-muted);
+}
+
+.spinner {
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(5, 48, 92, 0.28);
+  border-top-color: var(--navy);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- FAQ ---------- */
+
+.faq {
+  background: var(--bg-raised);
+  border-block: 1px solid var(--line);
+}
+
+.faq__layout {
+  display: grid;
+  gap: clamp(2rem, 1rem + 3vw, 3.5rem);
+  align-items: start;
+}
+
+@media (min-width: 940px) {
+  .faq__layout {
+    grid-template-columns: 0.78fr 1.22fr;
+  }
+}
+
+.faq__list {
+  display: grid;
+}
+
+.faq__item {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq__item:first-child {
+  border-top: 1px solid var(--line);
+}
+
+/* The heading wraps the trigger button only — it carries no visual weight. */
+.faq__q {
+  font: inherit;
+  letter-spacing: inherit;
+  margin: 0;
+}
+
+.faq__trigger {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.3rem 0;
+  background: none;
+  border: 0;
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: clamp(1.0625rem, 1rem + 0.35vw, 1.1875rem);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--navy);
+  transition: color 0.2s var(--ease);
+}
+
+.faq__trigger:hover {
+  color: var(--teal);
+}
+
+.faq__icon {
+  flex: none;
+  margin-top: 2px;
+  color: var(--teal);
+  transition: transform 0.3s var(--ease);
+}
+
+.faq__trigger[aria-expanded="true"] .faq__icon {
+  transform: rotate(45deg);
+}
+
+/* grid-template-rows trick animates to auto height without a fixed value */
+.faq__panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s var(--ease);
+}
+
+.faq__panel[data-open="true"] {
+  grid-template-rows: 1fr;
+}
+
+.faq__panel > div {
+  overflow: hidden;
+}
+
+.faq__answer {
+  padding-bottom: 1.4rem;
+  padding-right: 2.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.68;
+  color: var(--ink-muted);
+  max-width: 68ch;
+}
+
+.faq__pending {
+  font-style: italic;
+  color: var(--ink-faint);
+}
+
+/* ---------- Contact ---------- */
+
+/* Replaced a six-card grid. Five of those cards were unverified channels, so
+   the section was mostly empty boxes; this pairs the enquiry pitch with the
+   verified direct lines instead. */
+.contact {
+  background: var(--bg);
+}
+
+.contact__layout {
+  display: grid;
+  gap: clamp(2rem, 1.25rem + 2.5vw, 3.5rem);
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .contact__layout {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: clamp(2.5rem, 1.5rem + 4vw, 5rem);
+  }
+}
+
+.contact__cta {
+  margin-top: 1.75rem;
+}
+
+.contact__details {
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+}
+
+.contact__details-title {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 1.1rem;
+}
+
+.contact__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.1rem;
+}
+
+/* Rows size to their content, so one channel cannot leave a tall empty card. */
+.contact-row {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+}
+
+.contact-row__icon {
+  flex: none;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--teal);
+}
+
+.contact-row__body {
+  display: block;
+}
+
+.contact-row__label {
+  display: block;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.contact-row__value {
+  display: block;
+  margin-top: 0.15rem;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  line-height: 1.35;
+  color: var(--navy);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  width: fit-content;
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 1px;
+  transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.contact-row__value:hover {
+  color: var(--teal);
+  border-bottom-color: var(--teal);
+}
+
+.contact-row__note {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  background: var(--dark-bg-deep);
+  color: var(--dark-ink-muted);
+  padding-top: clamp(3rem, 2rem + 3vw, 4.5rem);
+  font-size: var(--fs-sm);
+}
+
+.footer__grid {
+  display: grid;
+  gap: clamp(2rem, 1rem + 3vw, 3rem);
+  padding-bottom: clamp(2.25rem, 1.5rem + 2vw, 3.25rem);
+}
+
+@media (min-width: 760px) {
+  .footer__grid {
+    grid-template-columns: 1.6fr 1fr 1fr;
+  }
+}
+
+.footer__brand .brand__name {
+  font-size: 1.25rem;
+}
+
+.footer__blurb {
+  margin-top: 1rem;
+  max-width: 38ch;
+  line-height: 1.65;
+  color: rgba(245, 242, 234, 0.58);
+}
+
+.footer__col h3 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 1rem;
+}
+
+.footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.footer__links--inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1.35rem;
+  margin-top: 1.25rem;
+}
+
+.footer__links a {
+  color: rgba(245, 242, 234, 0.62);
+  text-decoration: none;
+  transition: color 0.2s var(--ease);
+}
+
+.footer__links a:hover {
+  color: var(--ivory);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer__contact {
+  font-style: normal;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.footer__contact a {
+  color: rgba(245, 242, 234, 0.62);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.footer__contact a:hover {
+  color: var(--ivory);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer__pending {
+  font-style: italic;
+  color: rgba(245, 242, 234, 0.5);
+  line-height: 1.55;
+}
+
+.footer__pending-link {
+  font-style: italic;
+  color: rgba(245, 242, 234, 0.66);
+}
+
+.footer__bottom {
+  border-top: 1px solid rgba(245, 242, 234, 0.12);
+  padding-top: 1.5rem;
+  padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+  color: rgba(245, 242, 234, 0.66);
+}
+
+.footer__legal a {
+  color: rgba(245, 242, 234, 0.66);
+  text-decoration: none;
+}
+
+.footer__legal a:hover {
+  color: var(--ivory);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---------- Back to top ---------- */
+
+.to-top {
+  position: fixed;
+  right: calc(clamp(1rem, 0.5rem + 1.5vw, 2rem) + env(safe-area-inset-right, 0px));
+  bottom: calc(
+    clamp(1rem, 0.5rem + 1.5vw, 2rem) + env(safe-area-inset-bottom, 0px)
+  );
+  z-index: 40;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  background: var(--navy);
+  color: var(--cyan);
+  border: 1px solid rgba(245, 242, 234, 0.18);
+  border-radius: 50%;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition:
+    opacity 0.3s var(--ease),
+    transform 0.3s var(--ease),
+    background-color 0.3s var(--ease);
+}
+
+.to-top.is-visible {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.to-top:hover {
+  background: var(--charcoal);
+}
+/* ============================================================
+   Device layer â€” what belongs on a phone, and what does not.
+
+   The layout above is not a squeezed desktop: the navigation has
+   already collapsed to its drawer and the grids have already
+   reflowed. What is left here are the choices that only make sense
+   once you know the device â€” targets a thumb can hit, and the
+   content that is worth a tall stack of scrolling on a screen that
+   is 844px tall.
+
+   Everything above this block is device-neutral.
+   ============================================================ */
+
+/* ---------- Touch: 44px is the floor, not a nicety ---------- */
+
+@media (max-width: 1119px) {
+  /* The bar itself is a link back to the top; make the whole lockup a target. */
+  .brand {
+    min-height: 44px;
+  }
+
+  /* Drawer rows: 1.5rem type over a hairline looked generous but measured
+     19px of hit area. */
+  .nav__drawer a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  /* Pill links that were 24â€“38px tall. */
+  .docs__item {
+    min-height: 44px;
+  }
+
+  .contact-card__alt,
+  .contact-card__value a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  /* For a buyer working from a phone the tel: link is the single most-used
+     control on the page. */
+  .contact-card__value a {
+    font-size: 1rem;
+  }
+}
+
+/* ---------- Phone: what to cut, and what to stack better ---------- */
+
+@media (max-width: 620px) {
+  /* Three captioned thumbnails become three full-width photographs â€” about
+     900px of scrolling for imagery that illustrates a point the vessel shot
+     directly above it already makes. The strip keeps its identity on tablet
+     and desktop; on a phone the single large image carries it. */
+  .trade__strip {
+    display: none;
+  }
+
+  /* Five document chips each claimed a full row. Two up halves the stack and
+     keeps them reading as the chips they are. */
+  .docs__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .docs__item {
+    justify-content: center;
+    text-align: center;
+    padding-inline: 0.5rem;
+  }
+
+  /* Two narrow columns plus a full-width one left every caption wrapping to
+     three lines. One column, read properly. */
+  .quality__shots {
+    grid-template-columns: 1fr;
+  }
+
+  .quality__shot--wide {
+    grid-column: span 1;
+  }
+
+  .quality__shot--wide img {
+    aspect-ratio: 16 / 11;
+  }
+
+  /* A 42px disc covers more of a caption on a phone than on a monitor. */
+  .to-top {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* iOS Safari zooms the viewport on focus for any input under 16px and never
+   fully restores it. 15px read fine on desktop and was unusable on a phone. */
+@media (max-width: 1119px) {
+  .field__control,
+  .field__control option {
+    font-size: 1rem;
+  }
+}
+
+/* ---------- Small phone: drop the decorative, keep the wordmark ---------- */
+
+@media (max-width: 480px) {
+  /* "Charcoal & Trade" is a tagline under the wordmark. At 10px it sat below
+     the legibility floor and shortened the header for no gain â€” the wordmark
+     carries the identity on its own. */
+  .brand__sub {
+    display: none;
+  }
+}
+
+/* ---------- Landscape phone: 100svh is very short, so give it back ---------- */
+
+@media (max-height: 560px) and (max-width: 1119px) {
+  .hero__inner {
+    padding-top: calc(var(--nav-h) + 0.75rem);
+    padding-bottom: 1rem;
+  }
+}
+
+
+/* Follow-up: the targets the first pass missed because they carry button
+   classes or live in the footer rather than a section. Same 44px floor. */
+@media (max-width: 1119px) {
+  /* The product card's "Request Specifications" ghost button. */
+  .btn--small {
+    min-height: 44px;
+  }
+
+  /* Footer navigation, the contact line and the legal row. */
+  .footer__links a,
+  .footer__contact a,
+  .footer__legal a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  /* Match the rest of the touch floor rather than staying a little smaller. */
+  .to-top {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* Touch padding must not drag the underline off the text: a border-bottom on
+   a 44px inline-flex box sits under the box, not under the glyphs. */
+@media (max-width: 1119px) {
+  .contact-card__alt {
+    border-bottom: 0;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    text-decoration-color: var(--line-strong);
+  }
+}
+
+/* ---------- Narrow phone (320px): the smallest screen worth holding ---------- */
+
+@media (max-width: 360px) {
+  /* At 17px the wordmark alone measured 212px; with the 44px toggle and the
+     gutter there was no room for it, and the bar pushed 42px off screen.
+     A smaller lockup keeps the identity legible. Padding stays on --gutter
+     so the bar keeps the same content edge as every section below it. */
+  .header__inner {
+    gap: 0.75rem;
+  }
+
+  .brand__name {
+    font-size: 0.875rem;
+  }
+
+  .brand__mark {
+    height: 28px;
+  }
+}
+
+/* Grid and flex children default to `min-width: auto`, which refuses to shrink
+   below their content's min-content width. Nothing here has a nowrap run long
+   enough to need it, so the default only pushes sections past a narrow
+   viewport. This is the fix that stops that class of bug recurring. */
+.quote__grid > *,
+.quote__aside > * {
+  min-width: 0;
+}

@@ -1,0 +1,49 @@
+- generic [active] [ref=f17e1]:
+  - generic [ref=f17e3]:
+    - link "Ocean Spark International Charcoal & Trade" [ref=f17e4] [cursor=pointer]:
+      - /url: /
+      - generic [ref=f17e5]:
+        - text: Ocean Spark International
+        - generic [ref=f17e6]: Charcoal & Trade
+    - link "Back to website" [ref=f17e7] [cursor=pointer]:
+      - /url: /
+  - main [ref=f17e8]:
+    - generic [ref=f17e9]:
+      - paragraph [ref=f17e10]: Privacy
+      - heading "Privacy Policy" [level=1] [ref=f17e11]
+      - paragraph [ref=f17e12]: "Last updated: 11 October 2026"
+      - paragraph [ref=f17e13]: This policy explains what happens to the business contact details you type into the inquiry form on this website. Ocean Spark International collects only what is needed to answer a trade enquiry, and does not sell or share it.
+      - heading "What we collect" [level=2] [ref=f17e14]
+      - paragraph [ref=f17e15]: "When you submit the inquiry form we receive the details you enter: your name, company, business email address, phone number, country, the product and quantity you are interested in, your delivery destination, and anything you write in the additional requirements box. We do not collect payment card details through this website."
+      - heading "Why we use it" [level=2] [ref=f17e16]
+      - paragraph [ref=f17e17]: "Your details are used only to:"
+      - list [ref=f17e18]:
+        - listitem [ref=f17e19]: respond to your enquiry and prepare a quotation;
+        - listitem [ref=f17e20]: clarify specification, quantity, packaging or delivery requirements;
+        - listitem [ref=f17e21]: maintain a record of the commercial conversation with you;
+        - listitem [ref=f17e22]: meet legal, tax and customs record-keeping obligations.
+      - paragraph [ref=f17e23]: We do not add you to a marketing list, and we do not pass your details to third parties for their own marketing.
+      - heading "How long we keep it" [level=2] [ref=f17e24]
+      - paragraph [ref=f17e25]: Enquiry records are retained for as long as needed to deal with the enquiry and to meet our legal and accounting obligations, after which they are deleted or anonymised.
+      - heading "Who can see it" [level=2] [ref=f17e26]
+      - paragraph [ref=f17e27]: Your enquiry is handled by the Ocean Spark International trade desk and by the parties we need to involve in fulfilling it — for example a freight forwarder or customs broker handling the shipment, where that is necessary to answer your enquiry. Those parties receive only the details required for their part of the movement.
+      - heading "How it is protected" [level=2] [ref=f17e28]
+      - paragraph [ref=f17e29]: The form is submitted over an encrypted connection. Access to enquiry records is limited to staff who need it to handle trade enquiries. We do not store enquiry details in browser storage and we do not use advertising or cross-site tracking cookies on this website.
+      - heading "Your choices" [level=2] [ref=f17e30]
+      - paragraph [ref=f17e31]:
+        - text: You can ask us to correct or delete the details we hold about you, or to stop contacting you, at any time. Contact us on
+        - link "+91 91763 41095" [ref=f17e32] [cursor=pointer]:
+          - /url: tel:+919176341095
+        - text: and we will action the request.
+      - heading "Changes to this policy" [level=2] [ref=f17e33]
+      - paragraph [ref=f17e34]: If this policy changes, the updated version will be published on this page with a new "last updated" date.
+      - heading "Contact" [level=2] [ref=f17e35]
+      - paragraph [ref=f17e36]:
+        - text: Questions about this policy can be sent to Ocean Spark International on
+        - link "+91 91763 41095" [ref=f17e37] [cursor=pointer]:
+          - /url: tel:+919176341095
+        - text: .
+  - contentinfo [ref=f17e38]:
+    - generic [ref=f17e39]:
+      - paragraph [ref=f17e40]: © 2026 Ocean Spark International. All rights reserved.
+      - paragraph [ref=f17e41]: Coconut shell charcoal imported from Thailand.
